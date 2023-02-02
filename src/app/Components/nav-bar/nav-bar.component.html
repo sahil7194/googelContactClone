@@ -1,0 +1,38 @@
+<div class="flex flex-row">
+  <div class="basis-2/6 p-2 inline-block ">
+    <button class="ml-3" mat-icon-button aria-label="Example icon button with a vertical three dot icon"
+    (click)="clickMenu()" >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-icon>person</mat-icon>
+    <span class="ml-2 text-[23px]">
+      Contacts
+    </span>
+  </div>
+  <div class="basis-8/12 p-2">
+    <form class="example-form">
+      <mat-form-field class="w-full" appearance="fill">
+        <mat-label>Search</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
+          [matAutocomplete]="auto" class="w-64">
+
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="basis-2/6 p-2 flex justify-between">
+    <div class="">
+      <mat-icon class="mt-4 mx-3">contact_support</mat-icon>
+      <mat-icon class="mt-4 mx-3">settings</mat-icon>
+      <mat-icon class="mt-4 mx-3">apps</mat-icon>
+    </div>
+    <img src="https://i.pravatar.cc/300
+    " alt="" class="mt-2 inline-block h-12 w-12 rounded-full ring-2 ring-white
+    ">
+  </div>
+</div>
