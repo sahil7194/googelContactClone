@@ -4,11 +4,17 @@ import { ListComponent } from './Components/list/list.component';
 import { NewComponent } from './Components/new/new.component';
 import { EditComponent } from './Components/edit/edit.component';
 import { AppComponent } from './app.component';
+import { ShowComponent } from './Components/show/show.component';
 
 const routes: Routes = [
-  {path:'',component:AppComponent},
+  // old routing
+  // {path:'',component:AppComponent},
+
+  {path:'',component:ListComponent},
   {path:'new',component:NewComponent},
-  {path:'edit',component:EditComponent}
+  {path:'edit/:id',component:EditComponent},
+  {path:'show/:id',component:ShowComponent}
+
 ];
 
 @NgModule({

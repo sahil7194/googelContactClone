@@ -24,6 +24,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SideNavBarComponent } from './Components/side-nav-bar/side-nav-bar.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { ContactComponent } from './Components/contact/contact.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatRadioModule} from '@angular/material/radio';
     EditComponent,
     ShowComponent,
     ListComponent,
-    SideNavBarComponent
+    SideNavBarComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

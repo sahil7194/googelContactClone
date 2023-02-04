@@ -1,1 +1,78 @@
-<p>show works!</p>
+<!-- <p>show works!</p>
+{{contactData | json}} -->
+
+<div class="md:container md:mx-auto">
+  <div class="flex justify-start">
+    <div class="">
+      <mat-icon routerLink="">arrow_back</mat-icon>
+    </div>
+    <div class="w-full pl-8">
+
+      <div class="flex justify-between-center">
+        <div>
+          <img src="{{contactData.profile_url}}" alt="profile pic" class="m-1 inline-block h-[160px] w-[160px] rounded-full ring-2 ring-white
+      ">
+        </div>
+        <div class="pt-6 pl-5 w-64">
+          <h3>
+            <span class="text-[26px]">
+              {{contactData.first_name}}
+            </span>
+          </h3>
+          <!-- <h4>
+            user
+          </h4> -->
+          <button mat-icon-button [matMenuTriggerFor]="lableMenu">
+            <mat-icon>label</mat-icon>
+          </button>
+          <!-- <button mat-button >Menu</button> -->
+          <mat-menu #lableMenu="matMenu">
+            <!-- <mat-form-field appearance="fill"> -->
+            <!-- <mat-label>Label</mat-label>
+                  <mat-select>
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                  <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+                </mat-form-field> -->
+            <button mat-menu-item>create label</button>
+            <button mat-menu-item> lable 1</button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-end ">
+      <button mat-raised-button color="primary" routerLink="/edit/{{contactData.id}}">Edit</button>
+    </div>
+  </div>
+  <hr class="mt-3">
+  <mat-card class="w-3/5 mt-4 bg-gray-400 rounded">
+    <mat-card-header>
+      Contact Details
+    </mat-card-header>
+    <mat-card-content>
+
+      <hr class="my-2">
+
+      <div class="flex justify-start">
+        <div>
+          <mat-icon> mail_outline</mat-icon>
+        </div>
+        <div class="ml-3  pt-1">
+          {{contactData.email}}
+        </div>
+      </div>
+
+      <div class="flex justify-start">
+        <div>
+          <mat-icon> phone</mat-icon>
+        </div>
+        <div class="ml-3  pt-1">
+          {{contactData.mobile_number}}
+        </div>
+      </div>
+
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

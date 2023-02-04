@@ -1,1 +1,72 @@
-<p>new works!</p>
+<div class="md:container md:mx-auto" [formGroup]="basicForm">
+  <div class="flex justify-start">
+    <div class="">
+      <mat-icon routerLink="">close</mat-icon>
+    </div>
+    <div class="w-full pl-8">
+      <img src="{{url}}" alt="profile pic" class="m-1 inline-block h-[180px] w-[180px] rounded-full ring-2 ring-white
+      ">
+      <button mat-icon-button [matMenuTriggerFor]="lableMenu">
+        <mat-icon>label</mat-icon>
+      </button>
+      <!-- <button mat-button >Menu</button> -->
+      <mat-menu #lableMenu="matMenu">
+        <!-- <mat-form-field appearance="fill"> -->
+        <!-- <mat-label>Label</mat-label>
+            <mat-select>
+              <mat-option value="option">Option</mat-option>
+            </mat-select>
+            <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+          </mat-form-field> -->
+        <button mat-menu-item>create label</button>
+        <button mat-menu-item> lable 1</button>
+      </mat-menu>
+    </div>
+    <div class="flex items-end ">
+      <button mat-raised-button color="primary" [disabled]="basicForm.invalid" (click)="submit()">Save</button>
+    </div>
+  </div>
+  <hr class="mt-3">
+
+  <!-- input form feild for first name -->
+  <div class="flex justify-start p-2 w-full">
+    <div class="p-2">
+      <mat-icon>person</mat-icon>
+    </div>
+    <div class="p-2 w-96">
+      <mat-form-field appearance="fill" class="w-96">
+        <mat-label>Enter First Name</mat-label>
+        <input matInput placeholder="First Name" formControlName="first_name" class="w-96">
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+
+    </div>
+  </div>
+
+  <!-- input form feild for first name -->
+  <div class="flex justify-start p-2 w-full">
+    <div class="p-2">
+      <mat-icon> mail_outline</mat-icon>
+    </div>
+    <div class="p-2 w-96">
+      <mat-form-field appearance="fill" class="w-96">
+        <mat-label>Enter Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" class="w-96">
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+    </div>
+  </div>
+  <!-- input form feild for first name -->
+  <div class="flex justify-start p-2 w-full">
+    <div class="p-2">
+      <mat-icon> phone</mat-icon>
+    </div>
+    <div class="p-2 w-96">
+      <mat-form-field appearance="fill" class="w-96">
+        <mat-label>Enter Mobile Number</mat-label>
+        <input matInput placeholder="Mobile Number" formControlName="mobile_number" class="w-96">
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+    </div>
+  </div>
+</div>

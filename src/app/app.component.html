@@ -1,52 +1,12 @@
 <mat-sidenav-container class="app-drawer-container" fullscreen>
   <mat-sidenav #sidenav mode="over">
     <div class="w-48">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia a facilis error, quia obcaecati dolor vel eligendi sed illum quis explicabo in labore, illo corrupti, praesentium esse dolorem. Facilis.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia a facilis error, quia obcaecati dolor
+      vel eligendi sed illum quis explicabo in labore, illo corrupti, praesentium esse dolorem. Facilis.
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-nav-bar></app-nav-bar>
-
-    <button mat-fab color="accent" (click)="clickMenu()"
-    class="menu-button"
-    [class.mat-elevation-z2]="!isOver"
-    [class.mat-elevation-z8]="isOver"
-    (mouseover)="isOver = true"
-    (mouseleave)="isOver = false">
-  <i class="material-icons" *ngIf="!openMenu">menu</i>
-  <i class="material-icons" *ngIf="openMenu">close</i>
-</button>
-
-<!-- menu button -->
-<button mat-mini-fab
-  class="action-button one mat-elevation-z8"
-  *ngIf="openMenu"
-  color="basic"
-  (click)="hello( 'button one')">
-  <i class="material-icons">face</i>
-</button>
-
-<button mat-raised-button
-  class="label labelone mat-elevation-z8"
-  *ngIf="openMenu"
-  color="basic"
-  (click)="hello('button one')">
-  Say Hello One
-</button>
-
-<button mat-mini-fab
-  class="action-button two mat-elevation-z8"
-  *ngIf="openMenu"
-  color="basic"
-  (click)="hello('button two')">
-  <i class="material-icons">done_all</i>
-</button>
-<button mat-raised-button
-  class="label labeltwo mat-elevation-z8"
-  *ngIf="openMenu"
-  color="basic"
-  (click)="hello('button two')">
-  Say Hello Two
-</button>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

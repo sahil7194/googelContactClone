@@ -17,19 +17,12 @@ export class AppComponent {
 
   ngOnInit() {
    this.sideNavService.sideNavToggleSubject.subscribe(()=> {
-      this.sidenav.toggle();
+      if(this.sidenav){
+
+        this.sidenav.toggle();
+      }
     });
   }
 
-  public openMenu: boolean = false;
-  isOver = false;
 
-  clickMenu(){
-    console.log('hello');
-    this.openMenu = !this.openMenu;
-  }
-
-  hello(mex: string){
-      alert('Hello '+mex+'!' );
-  }
 }

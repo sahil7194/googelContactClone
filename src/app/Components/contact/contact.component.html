@@ -1,0 +1,28 @@
+<div class="grid grid-cols-4 divide-x border-b-2 border-x-gray-100 mt-2">
+  <div class="text-[16px] p-2 border-none">
+    <img src="{{contactData.profile_url}}" alt="profile pic" class="m-1 inline-block h-10 w-10 rounded-full ring-2 ring-white
+      ">
+      <span class="ml-2 capitalize" routerLink="show/{{contactData.id}}">
+        {{contactData.first_name}}
+      </span>
+  </div>
+  <div class="text-[16px] p-2 pt-5 border-none">
+    <span class="mt-7" routerLink="show/{{contactData.id}}">
+      {{contactData.email}}
+    </span>
+  </div>
+  <div class="text-[16px] p-2 pt-5 border-none">
+    <span class="mt-7" routerLink="show/{{contactData.id}}">
+      {{contactData.mobile_number}}
+    </span>
+  </div>
+  <div class="text-[16px] p-2 pt-5 border-none">
+    <span class="mt-7" routerLink="show/{{contactData.id}}">
+      {{contactData.label_id}}
+    </span>
+    <button class="ml-3" mat-icon-button
+    (click)="delete(contactData.id)">
+    <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
