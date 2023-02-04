@@ -17,6 +17,7 @@ export class ListComponent {
 
   ngOnInit(){
     this.contactList = this.fetchAllContact();
+      console.log(this.contactList);
   }
   clickMenu(){
     this.openMenu = !this.openMenu;
